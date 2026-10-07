@@ -283,6 +283,8 @@ print(string_contains_chars)
 total = 0
 evenSums = 0
 oddSums = 0
+evenAverage = 0
+oddAverage = 0
 done = False
 while(not done):
   user_in = input("Give me an integer or type 'done' to be done.")
