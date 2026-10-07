@@ -210,3 +210,93 @@ a = 5;
 b = 6; print ("Area = ", areaRectangle(a, b))
 
 print ("Perimeter = ", perimeterRectangle(a, b))
+
+#program26
+import random
+import math
+
+# Taking Inputs
+lower = int(input("Enter Lower bound:- "))
+
+# Taking Inputs
+upper = int(input("Enter Upper bound:- "))
+
+# generating random number between
+# the lower and upper
+x = random.randint(lower, upper)
+print("\n\tYou've only ",round(math.log(upper - lower + 1, 2)), " chances to guess the integer!\n")
+
+# Initializing the number of guesses.
+count = 0
+
+# for calculation of minimum number of
+# guesses depends upon range
+while count < math.log(upper - lower + 1, 2):
+   count += 1
+
+   # taking guessing number as input
+   guess = int(input("Guess a number:- "))
+
+   # Condition testing
+   if x == guess:
+      print("Congratulations you did it in ",count, " try")
+      # Once guessed, loop will break
+      break
+   
+   elif x > guess:
+      print("You guessed too small!")
+   elif x < guess:
+      print("You Guessed too high!")
+
+# If Guessing is more than required guesses,
+# shows this output.
+if count >= math.log(upper - lower + 1, 2):
+   print("\nThe number is %d" % x)
+   print("\tBetter Luck Next time!")
+
+#program27
+import datetime
+date=str(input('Enter the date(for example:09 02 2019):'))
+day_name= ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
+'Saturday','Sunday']
+
+day = datetime.datetime.strptime(date, '%d %m %Y').weekday()
+print(day_name[day])
+
+#program28
+def find_missing(lst):
+    return [x for x in range(lst[0], lst[-1] + 1) if x not in lst]
+
+# Driver code
+lst = [1, 2, 4, 6, 7, 9, 10]
+print(find_missing(lst))
+
+#program29
+char_list = ["a", "b" ,"c"]
+string = "abcd"
+matched_list = [characters in char_list for characters in string]
+print(matched_list)
+string_contains_chars = all(matched_list)
+print(string_contains_chars)
+
+#programn30
+total = 0
+evenSums = 0
+oddSums = 0
+done = False
+while(not done):
+  user_in = input("Give me an integer or type 'done' to be done.")
+if( user_in.lower() == "done"):
+  done = True
+else:
+# assuming they've typed in an integer
+ total += int(user_in)
+ if user_in % 2 == 0:
+  evenSums += user_in
+  evenAverage = evenSums / user_in
+ else:
+  oddSums += user_in
+  oddAverage = oddSums / user_in
+  print(total)
+  print("Even Average: " + str(evenAverage))
+  print("Odd Average: " + str(oddAverage))
