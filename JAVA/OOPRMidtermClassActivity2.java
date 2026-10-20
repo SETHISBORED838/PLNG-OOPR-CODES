@@ -78,8 +78,6 @@ public static void main(String[] args) {
             
             double percentComplete = ((double) PagesRead / TotalPages) * 100;
 
-            // Note: Old scanner.nextLine() buffer clear removed since we are now strictly using scanner.nextLine()!
-
             System.out.println("Enter the Date issued (YYYY-MM-DD) example(2007-03-28): ");
             String issuedInput = scanner.nextLine(); 
             LocalDate dateIssued = LocalDate.parse(issuedInput, formatter);
