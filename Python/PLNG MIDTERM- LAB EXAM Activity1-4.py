@@ -45,9 +45,9 @@ class Laptop(ElectronicProduct):
 
 def main():
     books = [
-        Book("How to program with AI", "Martin Santino", 2700.00),
-        Ebook("How to destroy an AI datacenter", "Martin Santino", 3000.00, 4.5),
-        Ebook("How to bomb an AI datacenter", "Martin Santino", 5000.00, 5.0,)
+        Book("Book being a good person", "Martin Santino", 2700.00),
+        Ebook("Book on how to be a good programmer", "Martin Santino", 3000.00, 4.5),
+        Ebook("How to study better", "Martin Santino", 5000.00, 5.0,)
     ]
   
     rog_laptops = [
